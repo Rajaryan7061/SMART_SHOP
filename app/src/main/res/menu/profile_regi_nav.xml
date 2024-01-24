@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_button"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+
+    <item
+        android:id="@+id/list_pdt"
+        android:title="List Product"
+        android:icon="@drawable/pdt_list"/>
+
+
+    <item
+        android:id="@+id/make_shop"
+        android:title="creat shop"
+        android:icon="@drawable/store_icon"/>
+
+
+</menu>

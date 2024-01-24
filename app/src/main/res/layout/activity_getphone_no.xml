@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".phone_Activity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/getphonethem2">
+
+      <EditText
+          android:text="+91"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="20dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginLeft="15dp"
+      android:id="@+id/ETget_phone_no"
+      android:hint="12345"
+          android:textSize="30dp"
+          android:textStyle="bold"
+          android:textColor="#00838F"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get otp"
+        android:textSize="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_get_otp"
+        android:backgroundTint="#ED6B00"
+        style="@style/Base.CardView"
+        android:padding="10dp"
+
+
+
+        />
+
+
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Home"
+           android:layout_marginTop="20dp"
+           android:id="@+id/home_btn"/>
+    <ProgressBar
+        android:id="@+id/pr_bar"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"/>
+  </LinearLayout>
+
+
+

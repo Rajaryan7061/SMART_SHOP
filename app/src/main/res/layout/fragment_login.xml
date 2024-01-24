@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment"
+    android:clipToOutline="true"
+    android:gravity="center"
+    android:orientation="vertical"
+
+
+    android:background="@drawable/background">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+
+        android:src="@drawable/untitled_design"/>
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="80dp"
+        android:hint="@string/Email"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:background="@drawable/round"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:id="@+id/Et_get_email"/>
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="60dp"
+        android:hint="@string/Password"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:background="@drawable/round"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:id="@+id/Et_get_password"/>
+
+    <EditText
+        android:inputType="none"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/Log_in"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:background="@drawable/round"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:gravity="center"
+        android:id="@+id/btn_Log_in"/>
+
+
+
+</LinearLayout>

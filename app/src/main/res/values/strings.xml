@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SMART_SHOP</string>
+
+    <style name="raj"></style>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Profile">home activity</string>
+    <string name="Shop_name">Shop name</string>
+    <string name="CreateShop"></string>
+    <string name="Register">Register</string>
+    <string name="Password">Password</string>
+    <string name="Email">Email</string>
+    <string name="Phone">Phone</string>
+    <string name="Address">Address</string>
+    <string name="Log_in">Log in</string>
+
+</resources>

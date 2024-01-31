@@ -69,5 +69,8 @@ dependencies {
     implementation ("com.google.android.material:material:1.2.0")
     //---Create Fragment Using Bottom Navigation in Social Media Android--//
 
+    //help firebase to open the browser for reCAPTCHA verification.
+    implementation( "androidx.browser:browser:1.2.0")
+
 
 }

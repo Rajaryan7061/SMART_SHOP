@@ -20,23 +20,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imgView"/>
 
-           <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="600dp"
-               android:text="Upload image "
-               android:background="@drawable/round"
-               android:layout_marginLeft="120dp"
-               android:id="@+id/btn_upload_image"
-               android:backgroundTint="@color/black"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="choose "
-                android:layout_marginLeft="120dp"
-                android:layout_marginTop="10dp"
-                android:id="@+id/btn_choose_img"
-                android:layout_marginBottom="10dp"/>
+
 
 
 

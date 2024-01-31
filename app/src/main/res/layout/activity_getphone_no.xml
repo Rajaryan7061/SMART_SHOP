@@ -17,7 +17,7 @@
       android:padding="20dp"
       android:layout_marginRight="15dp"
       android:layout_marginLeft="15dp"
-      android:id="@+id/ETget_phone_no"
+      android:id="@+id/et_get_phone_no"
       android:hint="12345"
           android:textSize="30dp"
           android:textStyle="bold"

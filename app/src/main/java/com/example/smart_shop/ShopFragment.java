@@ -46,12 +46,13 @@ import android.widget.Toast;
 
 public class ShopFragment extends Fragment {
 
-    TextView et_shp_create,btn_login;
+    TextView et_shp_create,tv_profile_btn;
   // private Button et_shp_create;
    // private String shopName,address,phoneNumber;
    // private FirebaseFirestore db;
-
-     FrameLayout frame_layout_two;
+  LoginFragment loginFragment=new LoginFragment();
+     FrameLayout frame_layout_two,log_in_fragment,shop_fragment;
+     Button btn_login;
     public ShopFragment() {
 
     }
@@ -60,18 +61,19 @@ public class ShopFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView=inflater.inflate(R.layout.fragment_shop, container, false);
+        TextView tv_profile_btn=(TextView)rootView.findViewById(R.id.tv_profile_btn);
+     //   FrameLayout log_in_fragment=rootView.findViewById(R.id.log_in_fragment);
    TextView textView=(TextView) rootView.findViewById(R.id.et_shp_create);
-   TextView btn_login=(TextView)rootView.findViewById(R.id.btn_login) ;
+   Button btn_login=(Button) rootView.findViewById(R.id.btn_login) ;
+
+
 
    btn_login.setOnClickListener(new View.OnClickListener() {
        @Override
        public void onClick(View v) {
-       Fragment fragment=new LoginFragment();
-      FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
-      FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-      fragmentTransaction.replace(R.id.shop_fragment,fragment);
-           fragmentTransaction.addToBackStack(null);
-           fragmentTransaction.commit();
+           FragmentTransaction fr = getFragmentManager().beginTransaction();
+           fr.replace(R.id.shop_fragment,new LoginFragment());
+           fr.commit();
        }
    });
 
@@ -80,6 +82,13 @@ public class ShopFragment extends Fragment {
        public void onClick(View v) {
            Intent i = new Intent(getActivity(),SignupActivity.class);
             startActivity(i);
+       }
+   });
+   tv_profile_btn.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View v) {
+           Intent i = new Intent(getActivity(), ProfileActivity.class);
+           startActivity(i);
        }
    });
 

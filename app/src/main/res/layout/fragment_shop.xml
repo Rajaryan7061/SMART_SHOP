@@ -10,6 +10,7 @@
     android:orientation="vertical">
 
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,10 +61,10 @@
 
                 />
 
-            <EditText
+            <TextView
                 android:clickable="true"
                 android:textSize="20dp"
-                android:id="@+id/et_password"
+                android:id="@+id/tv_profile_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -93,8 +94,8 @@
                 android:textColorHint="@color/black"
                 android:textStyle="bold" />
 
-            <TextView
-                android:clickable="true"
+            <Button
+
                 android:background="@drawable/round"
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
@@ -108,7 +109,7 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 android:textStyle="bold"
-                android:inputType="none"/>
+                />
             <EditText
                 android:clickable="true"
                 android:background="@drawable/round"

@@ -44,52 +44,34 @@ public class Get_otp_Activity extends AppCompatActivity {
        verify_btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-             //  String otp=pinview.getText().toString();
-               String otp =pinview.getText().toString();
-               if(!otp.isEmpty()){
-                   pr_br01.setVisibility(View.VISIBLE);
-                   Intent i = new Intent(getApplicationContext(),Get_otp_Activity.class);
-                    startActivity(i);
-                   verifyOtp(verificationId ,otp);
+               String otp=pinview.getText().toString();
 
-
-               }else {
-                   pinview.setError("Invalid otp please try again");
+               if(pinview.getText().toString().trim().isEmpty()){
+                   Toast.makeText(Get_otp_Activity.this, "Please enter valid code", Toast.LENGTH_SHORT).show();
+                   return;
+               }
+               if(verificationId != null){
+                 pr_br01 .setVisibility(View.VISIBLE);
+                   PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(
+                           verificationId,
+                           otp
+                   );
+                   FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential)
+                           .addOnCompleteListener(task -> {
+                       pr_br01.setVisibility(View.GONE);
+                       if(task.isSuccessful()){
+                           Intent intent = new Intent(getApplicationContext(), Home_Activity.class);
+                           intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                           startActivity(intent);
+                       }else {
+                           Toast.makeText(Get_otp_Activity.this, "The verification code entered was invalid", Toast.LENGTH_SHORT).show();
+                       }
+                   });
                }
            }
        });
 
 
     }
-    private  void verifyOtp(String verificationId , String otp ){
-        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId,otp);
-        signInWithPhoneAuthCredential(credential);
-    }
-    private  void signInWithPhoneAuthCredential(PhoneAuthCredential credential){
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            pr_br01.setVisibility(View.INVISIBLE);
-                            Intent intent = new Intent(Get_otp_Activity.this , Home_Activity.class);
-                            startActivity(intent);
-                            finish();
-                            //Intent i = new Intent(getApplicationContext(),Home_Activity.class);
-                           // startActivity(i);
-                           // Intent i = new Intent(getApplicationContext(),Get_otp_Activity.class);
-                            // startActivity(i);
-                        }
-                        else{
-                            pr_br01.setVisibility(View.INVISIBLE);
-                           String message = "Verification failed , Please try again later .";
-                            if (task.getException() instanceof FirebaseAuthInvalidCredentialsException){
-                               message = "Invalid code entered...";
-                            }
-                            Toast.makeText(Get_otp_Activity.this , message, Toast.LENGTH_SHORT).show();
-                      }
-                    }
-                });
-   }
 
 }

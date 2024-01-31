@@ -7,15 +7,11 @@
     android:clipToOutline="true"
     android:gravity="center"
     android:orientation="vertical"
+    android:id="@+id/log_in_fragment"
 
 
     android:background="@drawable/background">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="10dp"
 
-        android:src="@drawable/untitled_design"/>
     <EditText
 
         android:layout_width="match_parent"
@@ -46,8 +42,8 @@
         android:textColorHint="@color/black"
         android:id="@+id/Et_get_password"/>
 
-    <EditText
-        android:inputType="none"
+    <TextView
+
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

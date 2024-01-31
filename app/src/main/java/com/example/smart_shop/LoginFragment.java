@@ -24,7 +24,7 @@ import kotlin.contracts.Returns;
 
 public class LoginFragment extends Fragment {
     FirebaseFirestore firebaseFirestore;
-    DocumentReference ref;
+   DocumentReference ref;
     FirebaseFirestore db;
     EditText Et_get_email ,Et_get_password , btn_Log_in;
 
@@ -42,9 +42,9 @@ public class LoginFragment extends Fragment {
         EditText Et_get_password=view.findViewById(R.id.Et_get_password);
         EditText btn_get_Log_in=view.findViewById(R.id.btn_Log_in);
         firebaseFirestore=FirebaseFirestore.getInstance();
-        ref = firebaseFirestore.collection("shop").document();
+       ref = firebaseFirestore.collection("shop").document();
 
-       // return view;
+
         btn_get_Log_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,9 +65,10 @@ public class LoginFragment extends Fragment {
                                         String b1=Et_get_password.toString().trim();
                                         if (a.equalsIgnoreCase(a1) & b.equalsIgnoreCase(b1)){
                                             Toast.makeText(getActivity(),"Log in",Toast.LENGTH_SHORT).show();
-                                            FragmentTransaction fr = getFragmentManager().beginTransaction();
-                                            fr.replace(R.id.btn_Log_in,new HomeFragment());
-                                            fr.commit();
+                                           // FragmentTransaction fr = getFragmentManager().beginTransaction();
+                                           // fr.replace(R.id.btn_Log_in,new HomeFragment());
+                                           // fr.commit();
+
                                         }else{
                                             Toast.makeText(getActivity(),"Cannot login , incorrect Email and Password",Toast.LENGTH_SHORT).show();
                                         }
@@ -82,6 +83,7 @@ public class LoginFragment extends Fragment {
 
         });
         return view;
+
 
     }
 }

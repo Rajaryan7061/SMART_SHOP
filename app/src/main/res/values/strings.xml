@@ -13,5 +13,7 @@
     <string name="Phone">Phone</string>
     <string name="Address">Address</string>
     <string name="Log_in">Log in</string>
+    <string name="upload">upload</string>
+    <string name="Post">Post</string>
 
 </resources>
